@@ -6,7 +6,8 @@ convert.addEventListener("click", () => {
     myText = document.getElementById("text").value.trim()
 
     if (myText === "") {
-        speechSynthesis.speak("Enter A Message");
+        let error = new SpeechSynthesisUtterance("Please Enter A Message");
+        speechSynthesis.speak(error);
     }
 
     
