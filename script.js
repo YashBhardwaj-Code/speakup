@@ -5,8 +5,16 @@ let stop = document.getElementById("stop");
 convert.addEventListener("click", () => {
     myText = document.getElementById("text").value.trim()
 
-    let audio = new SpeechSynthesisUtterance(myText);
-    speechSynthesis.speak(audio);
+    if (myText === "") {
+        speechSynthesis.speak("Enter A Message");
+    }
+
+    
+    
+    else{
+        let audio = new SpeechSynthesisUtterance(myText);
+        speechSynthesis.speak(audio);
+    }
 })
 
 stop.addEventListener("click", () => {
