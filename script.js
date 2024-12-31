@@ -9,9 +9,7 @@ convert.addEventListener("click", () => {
         let error = new SpeechSynthesisUtterance("Please Enter A Message");
         speechSynthesis.speak(error);
     }
-
-    
-    
+        
     else{
         let audio = new SpeechSynthesisUtterance(myText);
         speechSynthesis.speak(audio);
